@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.imagen-portada {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Al pasar el cursor */
+nav ul li a:hover {
+  background-color: #ffa502;
+}
+
+/* Al hacer clic (efecto momentáneo) */
+nav ul li a:active {
+  background-color: #e0a800;
+}
+
+/* Menú seleccionado (clase personalizada) */
+nav ul li a.activo {
+  background-color: #ffa502;
+  color: #fff;
+}
+
+/* Fuente y fondo general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado y navegación */
+header {
+  background-color: #ff6b6b;
+  padding: 20px 40px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 28px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sección hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: url('img/fondo-comida.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffa502;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background-color: #e0a800;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/*menu estatico*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ff6b6b;
+}
+
+/* menu lateral */
+/* Menú lateral oculto */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -220px; /* oculto fuera de la pantalla */
+  width: 220px;
+  height: 100%;
+  background-color: #8b0000;
+  color: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+  transition: left 0.3s ease;
+  padding-top: 2rem;
+  z-index: 1000;
+}
+
+/* Estilo de los enlaces */
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral ul li {
+  margin: 1rem 0;
+}
+
+.menu-lateral ul li a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.3s;
+}
+
+.menu-lateral ul li a:hover {
+  background-color: #b22222;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Área sensible al hover en el borde izquierdo */
+.menu-lateral:hover {
+  left: 0; /* se despliega */
+}
+
+/* Truco: crear una zona invisible que active el hover */
+.menu-lateral::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px; /* ancho de la zona sensible */
+  height: 100%;
+}
+
+/* ====== FORMULARIO DE CONTACTO ====== */
+.formulario-contacto {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  color: #8b0000;
+  margin-bottom: 1.5rem;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario-contacto button {
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #a52a2a;
+}
+
+/* Footer */
+.footer {
+  background-color: #8b0000; /* rojo oscuro */
+  color: #fff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links li a {
+  color: #ffd700; /* dorado */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #fff;
+}
